@@ -1,0 +1,8 @@
+version: '3'
+services:
+  app:
+    image: vieirinhasantana/example-server-go
+    volumes:
+      - .:/go/src/github.com/vieirinhasantana/example-server-go
+    working_dir: /go/src/github.com/vieirinhasantana/example-server-go/cmd/
+    command: go run main.go
