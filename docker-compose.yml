@@ -3,6 +3,8 @@ services:
   app:
     image: vieirinhasantana/example-server-go
     volumes:
-      - .:/go/src/github.com/vieirinhasantana/example-server-go
-    working_dir: /go/src/github.com/vieirinhasantana/example-server-go/cmd/
+      - .:/go/src/example-server-go
+    working_dir: /go/src/example-server-go/cmd/app/
     command: go run main.go
+    ports: 
+      - 1234:8080
